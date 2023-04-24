@@ -11,10 +11,12 @@
       type="image/x-icon"
     />
   </head>
+
   <body>
     <div id="app">
       <section class="main-page">
         <header class="header flex-between">
+
           <div class="logo-wrapper">
             <img src="./public/icons/logo.png" alt="" class="logo" />
           </div>
@@ -285,61 +287,111 @@
               />
             </div>
 
-            <div class="title product__title">
-              <div class="bestsellers__title">Chocolate bisquite 123 $
-                <button class="cart">+</button>
+            <div class="flex-between product-buy">
+              <div class="title product__title">Chocolate bisquite</div>
+              <div class="product__buy flex-between">
+                  <div class="product-price">
+                      123 $
+                  </div>
+                  <div class="product-cart flex-center">
+                      <img src="./public/icons/pluss.png" alt="+">
+                  </div>
               </div>
-            </div>
           </div>
+      </div>
 
-          <div class="product">
-            <div class="product__image-wrapper">
+      <div class="product">
+          <div class="product__image-wrapper">
               <img
-                src="./public/images/bestsellers/bestseller-2.png"
-                alt="Sorry , something went wrong! Try again later! "
-                class="product__image"
+                      src="./public/images/bestsellers/bestseller-2.png"
+                      alt="Sorry , something went wrong! Try again later! "
+                      class="product__image"
               />
-            </div>
-
-            <div class="title product__title">
-              <div class="bestsellers__title">Yogurt cheesecake 123 $
-                <button class="cart">+</button>
-              </div>
-            </div>
           </div>
+          <div class="flex-between product-buy">
+              <div class="title product__title">Yogurt cheesecake</div>
+              <div class="product__buy flex-between">
+                  <div class="product-price">
+                      123 $
+                  </div>
+                  <div class="product-cart flex-center">
+                      <img src="./public/icons/pluss.png" alt="+">
+                  </div>
+              </div>
+          </div>
+      </div>
 
-          <div class="product">
-            <div class="product__image-wrapper">
+      <div class="product">
+          <div class="product__image-wrapper">
               <img
-                src="./public/images/bestsellers/bestseller-3.png"
-                alt="Sorry , something went wrong! Try again later! "
-                class="product__image"
+                      src="./public/images/bestsellers/bestseller-3.png"
+                      alt="Sorry , something went wrong! Try again later! "
+                      class="product__image"
               />
-            </div>
-
-            <div class="title product__title">
-              <div class="bestsellers__title">Milk cream cupcake 123 $
-                <button class="cart">+</button>
-              </div>
-            </div>
           </div>
+          <div class="flex-between product-buy">
+              <div class="title product__title">Milk cream cupcake</div>
+              <div class="product__buy flex-between">
+                  <div class="product-price">
+                      123 $
+                  </div>
+                  <div class="product-cart flex-center">
+                      <img src="./public/icons/pluss.png" alt="+">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="pager flex-center">
+      <div></div>
+      <div></div>
+  </div>
+
+  <div class="flex-center">
+      <button class="btn-catalog">Catalog</button>
+  </div>
+      </section>
+
+      <section class="order section">
+        <h3>individual order</h3>
+        <form action="#">
+            <div>
+                <input type="text" placeholder="Your name">
+            </div>
+            <div>
+                <input type="text" placeholder="Phone number">
+            </div>
+            <div>
+                <input type="text" placeholder="Email">
+            </div>
+            <div>
+                <input type="text" placeholder="Leave your comment ">
+            </div>
+            <input type="file" id="attach-photo">
+            <label for="attach-photo">
+                <div class="attach-photo">
+                    <span>Or attach a photo</span>
+                </div>
+            </label>
+        </form>
+        <div class="send-an-application">
+            Send an application
         </div>
-        <div class="button__bestsellers-wrapper">
-          <button class="button__bestsellers">Catalog</button>
+        <div class="order-info">
+            <span>Our manager will contact you within 15 minutes<br> to clarify the order</span>
         </div>
       </section>
 
-      <section class="order"></section>
-
-      <section class="footer-wrapper section">
+      <section class="footer section">
         <div class="footer-links">
           <div class="footer-social">
           <div class="logo-wrapper">
             <img src="./public/icons/logo.png" alt="" class="logo" />
           </div>
-          <img src="/public/icons/social-media-instagram.png" alt="" class="social">
-          <img src="/public/icons/social-media-telegram.png" alt="" class="social">
-          <img src="/public/icons/social-media-twitter.png" alt="" class="social">
+          <img src="/public/icons/social-media-instagram.png" alt="#" class="social">
+          <img src="/public/icons/social-media-telegram.png" alt="#" class="social">
+          <img src="/public/icons/social-media-twitter.png" alt="#" class="social">
         </div>
 
           <div class="footer-link">
@@ -360,16 +412,20 @@
           <div class="footer-link">
             <h3>Get in touch</h3>
             <p>Subscribe to our newsletter and stay up to date with all the news</p>
-            <div class="footer__input">
+            <label>
               <input type="text" placeholder="Enter your email">
-            </div>
+          </label>
+          <button><img src="./public/icons/side-panel.png" alt="gg"></button>
           </div>
       </div>
+
       <div class="span">
       <span>Privacy Policy  Company Data  All Cookies  Rules</span>
     </div>
+
       <span class="footer__span">© 2022 All rights reserved.</span>
       </section>
     </div>
+    
   </body>
 </html>
