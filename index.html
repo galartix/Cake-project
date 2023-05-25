@@ -429,3 +429,119 @@
     
   </body>
 </html>
+
+
+
+
+books_shop = [
+    {
+        "prod_id": 1,
+        "amount": 2,
+        "label": "Something interesting",
+        "price": 233,
+        "description": "There is something interesting"
+    }
+]
+
+def show_menu():
+    print("----- Меню -----")
+    print("1. Просмотреть все товары")
+    print("2. Добавить новый товар")
+    print("3. Обновить существующий товар")
+    print("4. Удалить товар")
+    print("0. Выйти из программы")
+
+def show_all_books():
+    print("----- Все товары -----")
+    for book in books_shop:
+        print("ID: ", book["prod_id"])
+        print("Наименование: ", book["label"])
+        print("Количество: ", book["amount"])
+        print("Цена: ", book["price"])
+        print("Описание: ", book["description"])
+        print("--------------------")
+
+def add_book():
+    prod_id = int(input("Введите ID товара: "))
+    amount = int(input("Введите количество товара: "))
+    label = input("Введите наименование товара: ")
+    price = float(input("Введите цену товара: "))
+    description = input("Введите описание товара: ")
+
+    book = {
+        "prod_id": prod_id,
+        "amount": amount,
+        "label": label,
+        "price": price,
+        "description": description
+    }
+
+    books_shop.append(book)
+    print("Товар успешно добавлен!")
+
+def update_book():
+    prod_id = int(input("Введите ID товара, который нужно обновить: "))
+
+    for book in books_shop:
+        if book["prod_id"] == prod_id:
+            amount = int(input("Введите новое количество товара: "))
+            label = input("Введите новое наименование товара: ")
+            price = float(input("Введите новую цену товара: "))
+            description = input("Введите новое описание товара: ")
+
+            book["amount"] = amount
+            book["label"] = label
+            book["price"] = price
+            book["description"] = description
+
+            print("Товар успешно обновлен!")
+            return
+
+    print("Товар с указанным ID не найден!")
+
+def delete_book():
+    prod_id = int(input("Введите ID товара, который нужно удалить: "))
+
+    for book in books_shop:
+        if book["prod_id"] == prod_id:
+            books_shop.remove(book)
+            print("Товар успешно удален!")
+            return
+
+    print("Товар с указанным ID не найден!")
+
+def login():
+    login = input("Введите логин: ")
+    password = input("Введите пароль: ")
+
+    if login == "admin" and password == "admin_password":
+        return True
+    else:
+        print("Неверный логин или пароль!")
+        return False
+
+def main():
+    if not login():
+        return
+
+    while True:
+        show_menu()
+        choice = input("Введите номер операции: ")
+
+        if choice == "1":
+            show_all_books()
+        elif choice == "2":
+            add_book()
+        elif choice == "3":
+            update_book()
+        elif choice == "4":
+            delete_book()
+        elif choice == "0":
+            print("Программа завершена.")
+            break
+        else:
+            print("Некорректный выбор операции. Повторите попытку.")
+
+if __name__ == "__main__":
+    main()
+
